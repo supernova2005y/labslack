@@ -2,6 +2,7 @@ name: Weekly Toban Bot
 on:
   schedule:
     - cron: '0 0 * * 1' # UTCの0:00 (日本時間の月曜9:00)
+  workflow_dispatch: # ←★これを追加！（手動実行を許可するおまじないです）
 
 jobs:
   run-bot:
