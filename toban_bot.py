@@ -4,7 +4,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN") #tokenは環境変数から取得する
-CHANNEL_ID = C051SNKKU8L
+CHANNEL_ID = "C051SNKKU8L"
 
 MEMBERS_1 = ["Aさん", "Bさん", "Cさん", "Dさん"]
 MEMBERS_2 = ["Eさん", "Fさん", "Gさん", "Hさん"]
