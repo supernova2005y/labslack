@@ -6,10 +6,12 @@ from slack_sdk.errors import SlackApiError
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN") #tokenは環境変数から取得する
 CHANNEL_ID = "C051SNKKU8L"
 
-MEMBERS_1 = ["Aさん", "Bさん", "Cさん", "Dさん"]
-MEMBERS_2 = ["Eさん", "Fさん", "Gさん", "Hさん"]
-
-# ==========================================
+# 鍵から文字列を取り出す
+members1_raw = os.environ.get("TOBAN_MEMBERS1", "")
+members2_raw = os.environ.get("TOBAN_MEMBERS2", "")
+# Pythonのリストに変換
+MEMBERS_1 = [m.strip() for m in members1_raw.split(",") if m.strip()]
+MEMBERS_2 = [m.strip() for m in members2_raw.split(",") if m.strip()]
 
 def get_duty_person():
     # 現在の「週番号」（今年に入ってから何週目か）を取得
