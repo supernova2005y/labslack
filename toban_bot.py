@@ -7,8 +7,12 @@ SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
 CHANNEL_ID = "C051SNKKU8L" 
 
 # GitHubのSecretsからメンバーリストを取得して分解
-members_raw = os.environ.get("TOBAN_MEMBERS", "")
-MEMBERS = [m.strip() for m in members_raw.split(",") if m.strip()]
+# 鍵から文字列を取り出す
+members1_raw = os.environ.get("TOBAN_MEMBERS1", "")
+members2_raw = os.environ.get("TOBAN_MEMBERS2", "")
+# Pythonのリストに変換
+MEMBERS_1 = [m.strip() for m in members1_raw.split(",") if m.strip()]
+MEMBERS_2 = [m.strip() for m in members2_raw.split(",") if m.strip()]
 # ==========================================
 
 def get_duty_person():
