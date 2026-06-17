@@ -26,7 +26,7 @@ def get_duty_person():
 
 def main():
     person_on_duty_1, person_on_duty_2 = get_duty_person()
-    message = f"📢 今週の当番は *{person_on_duty_1}* と *{person_on_duty_2}* です！\nよろしくお願いします✨"
+    message = f"📢 今週の当番は *{person_on_duty_1}*さんと *{person_on_duty_2}*さんです！\nよろしくお願いします⭐"
 
     # Slack APIクライアントの初期化
     client = WebClient(token=SLACK_BOT_TOKEN)
